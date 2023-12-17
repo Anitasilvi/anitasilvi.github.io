@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Personal Website</title>
+  <meta name="description" content="Morden Bootstrap HTML5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dark.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <script>
+    if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.documentElement.classList.add("dark");
+    } 
+    if (localStorage.getItem("theme-color") === "light") {
+      document.documentElement.classList.remove("dark");
+    } 
+  </script>
+</head>
+<body class="bg-dark_primary_bg">
+    <div id="preloader">
+        <div class="loader--border"></div>
+    </div>
+    <button class="light__dark--btn style__fixed" id="light__to--dark">
+        <svg class="dark--mode__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512"><title>Moon</title><path d="M264 480A232 232 0 0132 248c0-94 54-178.28 137.61-214.67a16 16 0 0121.06 21.06C181.07 76.43 176 104.66 176 136c0 110.28 89.72 200 200 200 31.34 0 59.57-5.07 81.61-14.67a16 16 0 0121.06 21.06C442.28 426 358 480 264 480z"></path></svg>
+        <svg class="light--mode__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512"><title>Sunny</title><path d="M256 118a22 22 0 01-22-22V48a22 22 0 0144 0v48a22 22 0 01-22 22zM256 486a22 22 0 01-22-22v-48a22 22 0 0144 0v48a22 22 0 01-22 22zM369.14 164.86a22 22 0 01-15.56-37.55l33.94-33.94a22 22 0 0131.11 31.11l-33.94 33.94a21.93 21.93 0 01-15.55 6.44zM108.92 425.08a22 22 0 01-15.55-37.56l33.94-33.94a22 22 0 1131.11 31.11l-33.94 33.94a21.94 21.94 0 01-15.56 6.45zM464 278h-48a22 22 0 010-44h48a22 22 0 010 44zM96 278H48a22 22 0 010-44h48a22 22 0 010 44zM403.08 425.08a21.94 21.94 0 01-15.56-6.45l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.55 37.56zM142.86 164.86a21.89 21.89 0 01-15.55-6.44l-33.94-33.94a22 22 0 0131.11-31.11l33.94 33.94a22 22 0 01-15.56 37.55zM256 358a102 102 0 11102-102 102.12 102.12 0 01-102 102z"></path></svg>
+    </button>
+    <header class="header__section  header__transparent">
+        <div class="header__sticky">
+            <div class="container">
+                <div class="main__header d-flex justify-content-between align-items-center">
+                    <div class="main__logo">
+                        <h1>Anita</h1>
+                    </div>
+                    <div class="offcanvas__header--menu__open ">
+                        <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg" viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
+                            <span class="visually-hidden">Offcanvas Menu Open</span>
+                        </a>
+                    </div>
+                    <div class="main__header--right d-flex align-items-center d-none d-lg-block">
+                        <div class="header__menu menu_border--none">
+                            <nav class="header__menu--navigation">
+                                <ul class="header__menu--wrapper d-flex">
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#home">Home 
+                                        </a>
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#tech">Technology  </a>  
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#experience">Experience </a>  
+                                    </li>
+                                    <li class="header__menu--items">
+                                        <a class="header__menu--link" href="#portfolio">Portfolio </a>  
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <button class="primary__btn download__btn"> <a href="assets/AnitaSilviFerdina-resume.pdf" download="cv-anita">  
+                            <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                Download CV
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offcanvas__header">
+        <div class="offcanvas__inner">
+            <div class="offcanvas__logo">
+                <h1>AnitaS</h1>
+                <button class="offcanvas__close--btn" data-offcanvas>close</button>
+            </div>
+            <nav class="offcanvas__menu">
+                <ul class="offcanvas__menu_ul">
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#home">Home</a>
+                    </li>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#tech">Technology</a>
+                    </li>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#experience">Experience</a>
+                    </li>
+                    <li class="offcanvas__menu_li">
+                        <a class="offcanvas__menu_item" href="#portfolio">Portfolio</a>
+                    </li>
+                </ul>
+                <div class="offcanvas__download--btn">
+                    <button class="primary__btn download__btn"><a href="assets/AnitaSilviFerdina-resume.pdf" download="cv-anita"> 
+                        <svg class="download__btn--svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download CV
+                    </a>
+                    </button>
+                 </div>
+            </nav>
+        </div>
+    </div>
+    <main class="main__content_wrapper">
+        <div class="hero__section" id="home">
+            <div class="container">
+                <div class="hero__section--inner d-flex align-items-center">
+                    <div class="hero__thumbnail position__relative">
+                        <img class="hero__thumbnail--media light_img" src="assets/1.png" alt="img">
+                        <img class="hero__thumbnail--media dark_img" src="assets/1.png" alt="img">
+                    </div>
+                    <div class="hero__content">
+                        <span class="hero__content--subtitle text__secondary mb-10">Halo</span>
+                        <h2 class="hero__content--title mb-15">Anita Silvi Ferdina</h2>
+                        <h3 class="hero__content--subtitle2 mb-20">Web Developer</h3>
+                        <p class="hero__content--desc mb-30">Mahasiswa D3 Teknik Informatika di Politeknik Elektronika Negeri Surabaya. Saya tertarik dalam pengembangan website yang berfokus
+                            pada Backend.</p>
+                        <div class="hero__content--footer d-flex align-items-center">
+                            <div class="social__share d-flex align-items-center">
+                                <span class="social__share--title">Follow Me: </span>
+                                <ul class="social__share--wrapper d-flex">
+                                    <li class="social__share--child"><a class="social__share--link" href="https://www.linkedin.com/in/anitasilviferdina/">
+                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="20px" height="20px">    <path d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" /></svg>
+                                        <span class="visually-hidden">Linkedin</span>
+                                    </a>
+                                    </li>
+                                    <li class="social__share--child"><a class="social__share--link" href="https://twitter.com/aniitasilvi">
+                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="20px" height="20px">    <path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z"/></svg>
+                                        <span class="visually-hidden">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="social__share--child"><a class="social__share--link" href="https://www.instagram.com/aniitasilvi/">
+                                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="20px" height="20px"><path d="M 4 2 C 2.898438 2 2 2.898438 2 4 L 2 20 C 2 21.101563 2.898438 22 4 22 L 20 22 C 21.101563 22 22 21.101563 22 20 L 22 4 C 22 2.898438 21.101563 2 20 2 Z M 4 4 L 20 4 L 20 8 L 16.453125 8 C 15.355469 6.777344 13.765625 6 12 6 C 10.234375 6 8.644531 6.777344 7.546875 8 L 4 8 Z M 17 5 L 17 7 L 19 7 L 19 5 Z M 12 8 C 14.222656 8 16 9.777344 16 12 C 16 14.222656 14.222656 16 12 16 C 9.777344 16 8 14.222656 8 12 C 8 9.777344 9.777344 8 12 8 Z M 12 10 C 11.800781 10 11.601563 10 11.402344 10.097656 C 11.699219 10.300781 12 10.601563 12 11 C 12 11.601563 11.601563 12 11 12 C 10.601563 12 10.300781 11.800781 10.097656 11.402344 C 10 11.601563 10 11.800781 10 12 C 10 13.101563 10.898438 14 12 14 C 13.101563 14 14 13.101563 14 12 C 14 10.898438 13.101563 10 12 10 Z"/></svg>
+                                        <span class="visually-hidden">Instagram</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="brand__section brand__section--bg border__bottom section--padding" id="tech">
+            <div class="container">
+                    <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                        <div class="section__heading max-width-580">
+                            <span class="section__heading--subtitle text__secondary">SKILLs</span>
+                        </div>
+                    </div>
+                <div class="brand__section--inner">
+                    <div class="brand__logo--child">
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/html.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/html.png" alt="brand-logo">
+                        </div>
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/csss.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/csss.png" alt="brand-logo">
+                        </div>
+                    </div>
+                    <div class="brand__logo--child">
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/javascript.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/javascript.png" alt="brand-logo">
+                        </div>
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/php.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/php.png" alt="brand-logo">
+                        </div>
+                    </div>
+                    <div class="brand__logo--child">
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/mysql.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/mysql.png" alt="brand-logo">
+                        </div>
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/laravel.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/laravel.png" alt="brand-logo">
+                        </div>
+                    </div>
+                    <div class="brand__logo--child">
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/bootstrap.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/bootstrap.png" alt="brand-logo">
+                        </div>
+                        <div class="brand__logo--items">
+                            <img class="brand__logo--img brand_logo_light" src="assets/bulma.png" alt="brand-logo">
+                            <img class="brand__logo--img brand_logo_dark" src="assets/bulma.png" alt="brand-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="resume__section section--padding" id="experience">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">PROJECT EXPERICNCE AND EDUCATION</span>
+                    </div>
+                </div>
+                <div class="resume__section--inner d-flex">
+                    <div class="resume__step">
+                        <div class="border__position--style"> </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Web Developer & Software Quality Assurance</h3>
+                                        <span class="resume__content--subtitle">Trustmedis Healthtech Solution</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Magang Selama 6 Bulan sebagai Web developer dan QA. Berkontribusi dalam pembuatan website penggajian karyawan dan company profile serta melakukan testing untuk mencari bug pada website</p>
+                                    <span class="resume__date">2018 - 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Web Developer</h3>
+                                        <span class="resume__content--subtitle">Craftstore</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Dalam tugas akhir saya, saya membuat sebuah aplikasi berbasis website yaitu CraftStore. Aplikasi ini merupakan sebuah Web ecommerce, untuk penjualan kerajinan yang memiliki tujuan untuk
+                                        memudahkan seseorang dalam melakukan pembelian barang kerajinan dan dapat diakses oleh semua kalangan masyarakat</p>
+                                    <span class="resume__date">2020</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Backend Developer</h3>
+                                        <span class="resume__content--subtitle">HIMIT PENS</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Berperan aktif dalam tim yang mengembangkan sebuah sistem e-voting untuk pemilihan Ketua Himpunan Mahasiswa (KAHIMA) dan
+                                        Wakil Ketua Himpunan Mahasiswa (WAKAHIMA) di Jurusan Teknik Informatika. Sistem ini digunakan oleh seluruh mahasiswa Jurusan
+                                        Teknik Informatika untuk memilih kandidat terbaik</p>
+                                    <span class="resume__date">2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Web Developer</h3>
+                                        <span class="resume__content--subtitle">WPPL</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Berperan aktif pada tim dalam pengembangan aplikasi Cameris berbasis website untuk memudahkan pengguna dalam membandingkan lebih dari 2 kamera sekaligus,
+                                        serta memberikan informasi kamera yang jelas dan akurat untuk memenuhi mata kuliah Workshop Pengembangan Perangkat Lunak menggunakan metodologi agile/scrum selama 3 bulan.</p>
+                                    <span class="resume__date">2022 - 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="40" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Backend Developer</h3>
+                                        <span class="resume__content--subtitle">PT. Otak Kanan</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Magang Selama 6 Bulan sebagai Backend Developer. Berkontribusi dalam pembuatan API untuk Aplikasi Absensi dan Project Management</p>
+                                    <span class="resume__date">Juli 2023 - Desember 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume__step">
+                        <div class="border__position--style"> </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"></path></svg>                                    
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">Rekayasa Perangkat Lunak</h3>
+                                        <span class="resume__content--subtitle">SMKN 1 Surabaya</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Tugas Akhir saya pada waktu SMK yaitu pembuatan e-commerce aplikasi berbasis website yaitu CraftStore.
+                                        </p>
+                                    <span class="resume__date">2017 - 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"></path></svg>                                     
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">SMK KODING</h3>
+                                        <span class="resume__content--subtitle">SMKN 1 Surabaya</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Pelatihan gratis yang dirancang khusus bagi siswa SMK jurusan Rekayasa Perangkat Lunak. Tugas akhir selesai mengikuti pelatihan ini yaitu pembuatan catalog film berbasis mobile menggunakan kotlin</p>
+                                    <span class="resume__date">2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resume__items">
+                            <div class="border__round"></div>
+                            <div class="resume__items--inner d-flex">
+                                <span class="resume__icons">
+                                    <svg width="25" height="44" fill="currentColor" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"></path></svg>                                     
+                                </span>
+                                <div class="resume__content">
+                                    <div class="resume__content--top d-flex align-items-center mb-10">
+                                        <h3 class="resume__content--title">D3 Teknik Informatika</h3>
+                                        <span class="resume__content--subtitle">Politeknik Elektronika Negeri Surabaya</span>
+                                    </div>
+                                    <p class="resume__content--desc mb-20">Kampus Jl. Raya ITS, Keputih, Kec.
+                                        Sukolilo, Surabaya, Jawa Timur 60111</p>
+                                    <span class="resume__date">Agustus 2021 - Agustus 2024 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio__section portfolio__section--bg section--padding" id="portfolio">
+            <div class="container">
+                <div class="section__heading--topbar d-flex align-items-center justify-content-between mb-50">
+                    <div class="section__heading max-width-580">
+                        <span class="section__heading--subtitle text__secondary">PORTFOLIO</span>
+                    </div>
+                </div>
+                <div class="portfolio__section--inner">
+                    <div class="portfolio__grid mb--n30">
+                        <div class="element-item web" data-category="web">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#evote">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/evote.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">E-Voting</h3>
+                                        <p class="portfolio__desc text-white">Backend Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item graphics" data-category="graphics">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#gaji">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/gaji.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Web Penggajian Karyawan</h3>
+                                        <p class="portfolio__desc text-white">Web Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item development" data-category="development">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#ecommerce">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/ecommerce.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">CraftStore</h3>
+                                        <p class="portfolio__desc text-white">Web Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item mobile" data-category="mobile">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#cameris">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/cameris.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Cameris</h3>
+                                        <p class="portfolio__desc text-white">Web Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item web" data-category="web">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#hotel">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/simhotel.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">SIM-HOTEL</h3>
+                                        <p class="portfolio__desc text-white">Web Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="element-item graphics" data-category="graphics">
+                            <div class="portfolio__card">
+                                <a href="#" class="popup-modal--open display-block" data-bs-toggle="modal" data-bs-target="#elektronik">
+                                    <div class="portfolio__image--card">
+                                    <img src="assets/toko elektronik.png" alt="img">
+                                    </div>
+                                    <div class="portfolio__content">
+                                        <h3 class="portfolio__title text-white">Toko Elektronik</h3>
+                                        <p class="portfolio__desc text-white">Web Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer footer__section footer__bg">
+            <div class="container">
+                <div class="main__footer d-flex justify-content-between align-items-center">
+                    <p class="copyright__content mb-0">Developed with <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="text-paragraph" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </span>  by <span><a class="text__secondary" href="#">Anita Silvi Ferdina</a></span>© 2023</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <div class="modal fade" id="evote" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">E-Voting</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">laravel, Bootstrap</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Seluruh Mahasiswa Teknik Informatika</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    E-voting merupakan sebuah aplikasi berbasis website yang diciptakan khusus untuk memfasilitasi pemilihan Ketua Himpunan Mahasiswa (KAHIMA) dan Wakil Ketua Himpunan Mahasiswa (WAKAHIMA) di Jurusan Teknik Informatika. Sistem ini menjadi sarana utama bagi seluruh mahasiswa di jurusan tersebut untuk melakukan pemilihan terhadap kandidat yang dianggap paling cocok dan berkualitas untuk memimpin organisasi mahasiswa. Melalui platform ini, mahasiswa dapat memberikan suara mereka secara elektronik, memastikan proses pemilihan yang lebih efisien, transparan, dan mudah diakses oleh seluruh anggota komunitas. Dengan adanya e-voting, proses demokrasi di lingkungan akademis terbuka secara luas, memberikan peluang yang sama bagi semua mahasiswa untuk berpartisipasi dalam menentukan pemimpin yang dianggap paling sesuai dengan visi dan misi kemajuan jurusan Teknik Informatika.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/evote.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="gaji" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">Web Penggajian Karyawan</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">Laravel, Bootstrap</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Karyawan</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    Website Penggajian Karyawan merupakan sebuah platform daring yang dirancang khusus untuk mengelola informasi terkait pembayaran gaji dan manajemen keuangan yang berkaitan dengan karyawan dalam suatu perusahaan atau organisasi. Melalui website ini, perusahaan dapat melakukan berbagai aktivitas seperti menghitung gaji, mencatat absensi, dan menyediakan laporan keuangan terkait penggajian karyawan secara efisien. Dengan adanya platform ini, proses penggajian menjadi lebih terstruktur dan terotomatisasi, memungkinkan manajemen untuk mengakses informasi secara cepat dan akurat guna memastikan kesejahteraan finansial para karyawan dan kelancaran operasional perusahaan secara keseluruhan.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/gaji.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="ecommerce" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">CraftStore</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">Laravel, Bootstrap</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Masyarakat yang mempunyai minat pada Kerajinan</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    CraftStore adalah sebuah aplikasi berbasis website yang saya kembangkan sebagai proyek tugas akhir. Aplikasi ini berperan sebagai platform e-commerce yang menyediakan berbagai macam kerajinan tangan untuk dijual secara online. Tujuan utama dari CraftStore adalah untuk memberikan kemudahan bagi pengguna dalam melakukan pembelian berbagai barang kerajinan secara praktis melalui internet. Dengan konsep yang user-friendly dan navigasi yang intuitif, aplikasi ini dirancang agar dapat diakses oleh semua kalangan masyarakat, memungkinkan pengguna dari berbagai latar belakang untuk menjelajahi, memilih, dan membeli produk-produk kerajinan dengan mudah. Diharapkan bahwa CraftStore dapat memberikan pengalaman belanja yang menyenangkan serta mendukung para pengrajin lokal dalam memasarkan karya-karya kreatif mereka kepada lebih banyak orang.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/ecommerce.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="elektronik" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">Toko Elektronik</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">PHP, CSS, HTML</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Pengguna yang menjual barang elektronik(Kasir)</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    Website toko elektronik merupakan sebuah platform digital yang didesain khusus untuk kebutuhan pengelolaan transaksi, terutama pada toko-toko yang menjual produk-produk elektronik. Dengan menggunakan website ini, pemilik toko dan kasir dapat memanfaatkan fitur-fitur seperti pencatatan penjualan, manajemen stok barang, pembuatan laporan keuangan, dan pelacakan transaksi dengan lebih efisien. Sistem ini membantu dalam menyederhanakan proses transaksi kasir, meminimalkan kesalahan dalam pencatatan, serta memberikan data yang akurat dan terperinci tentang penjualan produk elektronik.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/toko elektronik.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cameris" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">CAMERIS</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">Laravel, Bootstrap</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Pengguna yang memiliki ketertarikan pada Camera, maupun Lensa</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    Cameris adalah sebuah aplikasi berbasis website yang diciptakan dengan tujuan utama untuk memberikan kemudahan kepada pengguna dalam melakukan perbandingan antara lebih dari dua kamera sekaligus. Aplikasi ini tidak hanya memungkinkan perbandingan langsung antara spesifikasi kamera, namun juga memberikan informasi yang jelas, terperinci, serta akurat mengenai setiap fitur dan karakteristik kamera yang dibandingkan. Pengguna dapat dengan mudah mengevaluasi perbedaan antara berbagai model kamera, seperti resolusi, jenis lensa, fitur fotografi yang ditawarkan, serta harga, sehingga memudahkan mereka dalam membuat keputusan yang lebih terinformasi sebelum melakukan pembelian kamera. Dengan menyediakan data yang komprehensif dan mudah diakses, Cameris bertujuan menjadi sumber informasi yang andal bagi para penggemar fotografi serta calon pembeli kamera untuk mendapatkan pemahaman yang lebih baik tentang produk kamera yang mereka minati.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/cameris.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal fade" id="hotel" tabindex="-1" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered portfolio__modal--dialog">
+          <div class="modal-content modal-content-height">
+            <button type="button" class="btn-close portfolio__modal--colse" data-bs-dismiss="modal" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <div class="modal-body portfolio__modal--body">
+                <h2 class="portfolio__modal--title text-center mb-30">SIM-HOTEL</h2>
+                <div class="portfolio__modal--info d-flex align-items-center mb-20">
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></span>
+                            Project :
+                            <span class="portfolio__modal--info__name">Website</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
+                            Languages :
+                            <span class="portfolio__modal--info__name">PHP, MySQL</span>
+                        </p>
+                    </div>
+                    <div class="portfolio__modal--info--list">
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+                            Client :
+                            <span class="portfolio__modal--info__name">Admin Hotel(Kasir)</span>
+                        </p>
+                        <p class="portfolio__modal--info--text">
+                            <span class="portfolio__modal--info__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+                            Preview :
+                            <a class="portfolio__modal--info__name" href="https://github.com/Anitasilvi" target="_blank" rel="noopener noreferrer">https://github.com/Anitasilvi</a>
+                        </p>
+                    </div>
+                </div>
+                <p class="portfolio__modal--info__desc mb-30">
+                    SIM-HOTEL adalah sebuah platform berbasis website yang dibuat khusus untuk kebutuhan manajemen transaksi di industri perhotelan. Didesain sebagai sistem informasi manajemen untuk kasir, website ini memfasilitasi proses pengelolaan transaksi hotel, termasuk pemesanan kamar, dan pembayaran. Melalui SIM-HOTEL, kasir dapat dengan mudah mengakses data tamu, melakukan proses check-in dan check-out, serta mengelola pembayaran dengan efisien. Fitur-fitur yang terintegrasi dalam platform ini memungkinkan pengelola hotel untuk mengontrol operasional secara lebih terarah, mengurangi kebingungan dalam pencatatan transaksi lebih cepat dan responsif kepada tamu.
+                </p>
+                <div class="portfolio__modal--info__media">
+                    <img src="assets/simhotel.png" alt="img">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <button id="scroll__top"><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round"  stroke-width="48" d="M112 244l144-144 144 144M256 120v292"/></svg></button>
+   <script src="assets/js/vendor/popper.js" defer="defer"></script>
+   <script src="assets/js/vendor/bootstrap.min.js" defer="defer"></script>
+   <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+   <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+   <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
+    if (localStorage.getItem("theme-color") === "dark" || (!("theme-color" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+      document.getElementById("light__to--dark")?.classList.add("dark--version");
+    } 
+    if (localStorage.getItem("theme-color") === "light") {
+      document.getElementById("light__to--dark")?.classList.remove("dark--version");
+    } 
+  </script>
+</body>
+</html>
